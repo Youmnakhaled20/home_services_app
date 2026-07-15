@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 220">
+  <!-- circular emblem -->
+  <circle cx="110" cy="110" r="76" fill="none" stroke="#14532D" stroke-width="4.5"/>
+
+  <!-- minimal house mark inside the badge -->
+  <path d="M62,124 L110,80 L158,124" fill="none" stroke="#14532D" stroke-width="6"
+        stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M76,118 V150 H144 V118" fill="none" stroke="#14532D" stroke-width="6"
+        stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="110" y1="150" x2="110" y2="122" stroke="#14532D" stroke-width="6" stroke-linecap="round"/>
+
+  <!-- small accent spark -->
+  <path d="M176,52 L179,60 L187,63 L179,66 L176,74 L173,66 L165,63 L173,60 Z" fill="#14532D"/>
+
+  <!-- wordmark -->
+  <text x="232" y="118" font-family="Arial, Helvetica, sans-serif" font-size="72"
+        font-weight="700" letter-spacing="2" fill="#14532D">ANY</text>
+  <text x="234" y="164" font-family="Arial, Helvetica, sans-serif" font-size="32"
+        font-weight="400" letter-spacing="10" fill="#14532D">SERVICE</text>
+
+  <!-- thin wide accent line -->
+  <line x1="234" y1="184" x2="960" y2="184" stroke="#14532D" stroke-width="2.5" stroke-linecap="round"/>
+</svg>
