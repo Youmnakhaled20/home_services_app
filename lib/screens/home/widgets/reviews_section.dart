@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../data/reviews_data.dart';
+import '../../../data/reviews_data.dart';
 import 'review_card.dart';
 
 class ReviewsSection extends StatelessWidget {

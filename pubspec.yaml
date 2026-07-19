@@ -1,5 +1,5 @@
 name: home_services_app
-description: "A new Flutter project."
+description: "A Home Services Flutter Application."
 publish_to: 'none'
 
 version: 1.0.0+1
@@ -10,21 +10,28 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  iconsax_flutter: ^1.0.0
+  flutter_bloc: ^8.1.3
   cupertino_icons: ^1.0.8
+  iconsax_flutter: ^1.0.0
+  flutter_svg: ^2.2.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_svg: ^2.2.1
+
   flutter_lints: ^6.0.0
 
 flutter:
   uses-material-design: true
 
   assets:
+    # General Images
     - assets/images/
-    - assets/images/categories/categories_hero/
+
+    # Hero Images
+    - assets/images/categories/
+
+    # Service Images
     - assets/images/services/cleaning/
     - assets/images/services/maintenance/
     - assets/images/services/finishing/
@@ -32,4 +39,6 @@ flutter:
     - assets/images/services/security/
     - assets/images/services/outdoor/
     - assets/images/services/daily_services/
+
+    # Icons
     - assets/icons/
