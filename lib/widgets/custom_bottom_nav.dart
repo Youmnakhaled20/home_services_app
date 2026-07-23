@@ -1,3 +1,4 @@
+// lib/widgets/custom_bottom_nav.dart
 import 'package:flutter/material.dart';
 import '../core/theme/app_colors.dart';
 
@@ -18,22 +19,15 @@ class CustomBottomNav extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
       decoration: BoxDecoration(
-        // ✅ Light: زيتي / Dark: شفاف
-        color: isDark
-            ? Colors.white.withOpacity(0.1)  // Dark: شفاف
-            : AppColors.primary,              // Light: زيتي (أخضر غامق)
+        color: isDark ? AppColors.darkCard : AppColors.darkCard,
         borderRadius: BorderRadius.circular(30),
-        border: isDark
-            ? Border.all(
-          color: Colors.white.withOpacity(0.15),
+        border: Border.all(
+          color: isDark ? AppColors.darkBorder : AppColors.darkBorder,
           width: 1.5,
-        )
-            : null,
+        ),
         boxShadow: [
           BoxShadow(
-            color: isDark
-                ? Colors.black.withOpacity(0.15)
-                : AppColors.primary.withOpacity(0.30),
+            color: Colors.black.withOpacity(0.3),
             blurRadius: 20,
             offset: const Offset(0, 8),
           ),
@@ -47,9 +41,10 @@ class CustomBottomNav extends StatelessWidget {
           type: BottomNavigationBarType.fixed,
           backgroundColor: Colors.transparent,
           elevation: 0,
-          // ✅ أيقونات بيضة في الاتنين
-          selectedItemColor: Colors.white,
-          unselectedItemColor: Colors.white.withOpacity(0.6),
+          selectedItemColor: isDark ? AppColors.darkNeon : AppColors.white,
+          unselectedItemColor: isDark
+              ? AppColors.darkNeon.withOpacity(0.5)
+              : AppColors.white.withOpacity(0.6),
           selectedFontSize: 12,
           unselectedFontSize: 11,
           selectedLabelStyle: const TextStyle(

@@ -1,207 +1,126 @@
+// lib/core/theme/app_theme.dart
 import 'package:flutter/material.dart';
-
 import 'app_colors.dart';
-import 'dark_app_colors.dart';
+import 'app_text_styles.dart';
 
 class AppTheme {
-  // ===========================
-  // Light Theme
-  // ===========================
   static ThemeData lightTheme = ThemeData(
     useMaterial3: true,
-
     brightness: Brightness.light,
+    fontFamily: AppTextStyles.fontFamily,
 
-    scaffoldBackgroundColor: AppColors.background,
-
-    primaryColor: AppColors.primary,
-
-    cardColor: AppColors.card,
+    primaryColor: AppColors.lightPrimary,
+    scaffoldBackgroundColor: AppColors.lightBackground,
+    cardColor: AppColors.lightCard,
 
     colorScheme: const ColorScheme.light(
-      primary: AppColors.primary,
-      secondary: AppColors.secondary,
-      surface: AppColors.card,
-      onPrimary: AppColors.white,
-      onSecondary: AppColors.text,
-      onSurface: AppColors.text,
+      primary: AppColors.lightPrimary,
+      secondary: AppColors.lightSecondary,
+      surface: AppColors.lightCard,
+      error: AppColors.error,
     ),
 
     appBarTheme: const AppBarTheme(
-      backgroundColor: AppColors.primary,
-      foregroundColor: AppColors.white,
+      backgroundColor: Colors.transparent,
       elevation: 0,
       centerTitle: true,
     ),
 
-    cardTheme: CardThemeData(
-      color: AppColors.card,
-      elevation: 4,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(16),
-      ),
-    ),
-
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
-        backgroundColor: AppColors.primary,
-        foregroundColor: AppColors.white,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
         elevation: 0,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(12),
-        ),
       ),
     ),
 
-    textTheme: const TextTheme(
-      headlineLarge: TextStyle(
-        color: AppColors.text,
-        fontSize: 32,
-        fontWeight: FontWeight.bold,
+    textButtonTheme: TextButtonThemeData(
+      style: TextButton.styleFrom(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       ),
-      headlineMedium: TextStyle(
-        color: AppColors.text,
-        fontSize: 24,
-        fontWeight: FontWeight.bold,
-      ),
-      titleLarge: TextStyle(
-        color: AppColors.text,
-        fontSize: 18,
-        fontWeight: FontWeight.w600,
-      ),
-      bodyLarge: TextStyle(
-        color: AppColors.text,
-        fontSize: 16,
-      ),
-      bodyMedium: TextStyle(
-        color: AppColors.textSecondary,
-        fontSize: 14,
+    ),
+
+    outlinedButtonTheme: OutlinedButtonThemeData(
+      style: OutlinedButton.styleFrom(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       ),
     ),
 
     inputDecorationTheme: InputDecorationTheme(
       filled: true,
-      fillColor: AppColors.card,
-
+      fillColor: Colors.grey.shade50,
       border: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(16),
+        borderRadius: BorderRadius.circular(12),
         borderSide: BorderSide.none,
       ),
-
       enabledBorder: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(16),
-        borderSide: BorderSide.none,
+        borderRadius: BorderRadius.circular(12),
+        borderSide: BorderSide(color: AppColors.lightBorder),
       ),
-
       focusedBorder: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(16),
-        borderSide: BorderSide.none,
+        borderRadius: BorderRadius.circular(12),
+        borderSide: const BorderSide(color: AppColors.lightPrimary, width: 2),
       ),
-
-      hintStyle: const TextStyle(
-        color: AppColors.grey,
-      ),
+      contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
     ),
   );
 
-  // ===========================
-  // Dark Theme
-  // ===========================
   static ThemeData darkTheme = ThemeData(
     useMaterial3: true,
-
     brightness: Brightness.dark,
+    fontFamily: AppTextStyles.fontFamily,
 
-    scaffoldBackgroundColor: DarkAppColors.background,
-
-    primaryColor: DarkAppColors.primary,
-
-    cardColor: DarkAppColors.card,
+    primaryColor: AppColors.darkPrimary,
+    scaffoldBackgroundColor: AppColors.darkBackground,
+    cardColor: AppColors.darkCard,
 
     colorScheme: const ColorScheme.dark(
-      primary: DarkAppColors.primary,
-      secondary: DarkAppColors.secondary,
-      surface: DarkAppColors.card,
-      onPrimary: DarkAppColors.white,
-      onSecondary: DarkAppColors.text,
-      onSurface: DarkAppColors.text,
+      primary: AppColors.darkPrimary,
+      secondary: AppColors.darkSecondary,
+      surface: AppColors.darkCard,
+      error: AppColors.error,
     ),
 
     appBarTheme: const AppBarTheme(
-      backgroundColor: DarkAppColors.primary,
-      foregroundColor: DarkAppColors.white,
+      backgroundColor: Colors.transparent,
       elevation: 0,
       centerTitle: true,
     ),
 
-    cardTheme: CardThemeData(
-      color: DarkAppColors.card,
-      elevation: 4,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(16),
-      ),
-    ),
-
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
-        backgroundColor: DarkAppColors.primary,
-        foregroundColor: DarkAppColors.white,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
         elevation: 0,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(12),
-        ),
       ),
     ),
 
-    textTheme: const TextTheme(
-      headlineLarge: TextStyle(
-        color: DarkAppColors.text,
-        fontSize: 32,
-        fontWeight: FontWeight.bold,
+    textButtonTheme: TextButtonThemeData(
+      style: TextButton.styleFrom(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       ),
-      headlineMedium: TextStyle(
-        color: DarkAppColors.text,
-        fontSize: 24,
-        fontWeight: FontWeight.bold,
-      ),
-      titleLarge: TextStyle(
-        color: DarkAppColors.text,
-        fontSize: 18,
-        fontWeight: FontWeight.w600,
-      ),
-      bodyLarge: TextStyle(
-        color: DarkAppColors.text,
-        fontSize: 16,
-      ),
-      bodyMedium: TextStyle(
-        color: DarkAppColors.textSecondary,
-        fontSize: 14,
+    ),
+
+    outlinedButtonTheme: OutlinedButtonThemeData(
+      style: OutlinedButton.styleFrom(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       ),
     ),
 
     inputDecorationTheme: InputDecorationTheme(
-      filled: false, // ✅ مهم للـ Search
-
-      fillColor: Colors.transparent,
-
+      filled: true,
+      fillColor: AppColors.darkCard,
       border: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(16),
+        borderRadius: BorderRadius.circular(12),
         borderSide: BorderSide.none,
       ),
-
       enabledBorder: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(16),
-        borderSide: BorderSide.none,
+        borderRadius: BorderRadius.circular(12),
+        borderSide: const BorderSide(color: AppColors.darkBorder),
       ),
-
       focusedBorder: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(16),
-        borderSide: BorderSide.none,
+        borderRadius: BorderRadius.circular(12),
+        borderSide: const BorderSide(color: AppColors.darkNeon, width: 2),
       ),
-
-      hintStyle: const TextStyle(
-        color: DarkAppColors.grey,
-      ),
+      contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
     ),
   );
 }
